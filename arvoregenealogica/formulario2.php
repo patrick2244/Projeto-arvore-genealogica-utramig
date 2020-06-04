@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
     
 </head>
+<!-- codigo para funcionamento do cep-->
 <?php    function get_endereco($cep){
   // formatar o cep removendo caracteres nao numericos
   $cep = preg_replace("/[^0-9]/", "", $cep);
@@ -33,7 +34,7 @@
   return $xml;
 }
 ?>
-<!-- Formulario 1 -->
+<!-- Formulario 2 -->
     <div class="main-panel">
       <div class="content">
         <div class="container-fluid">
@@ -80,7 +81,8 @@
                           <input type="text" class="form-control" name="cep">
                           <button type="submit">validar cep</button>
                       </div>
-                        <?php if(isset($_POST['cep'])){ ?>
+                        <!-- php para mostrar os campos do cep  -->
+                        
 <?php $endereco = get_endereco($_POST['cep']); ?>
                     
                     <div class="col-md-4">
@@ -102,7 +104,7 @@
                             <input type="text" class="form-control" readonly="" disabled="" placeholder="<?php echo $endereco->logradouro; ?> , <?php echo $endereco->bairro; ?> " />
                       </div>
                     </div>
-                     <?php } ?>
+                     
                     <br>
                       
                       

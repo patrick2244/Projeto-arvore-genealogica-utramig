@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
     
 </head>
+<!-- codigo para funcionamento do cep-->
 <?php    function get_endereco($cep){
   // formatar o cep removendo caracteres nao numericos
   $cep = preg_replace("/[^0-9]/", "", $cep);
@@ -56,6 +57,15 @@
                       
                       
                       <br>
+                      <div class="row">
+                      <div class="col-md-12">
+                          <label class="bmd-label-floating">senha*</label>
+                          <input type="password" class="form-control">
+                        </div>
+                      </div>
+                      
+                      
+                      <br>
                       
                     <div class="row">
                       <div class="col-md-4">
@@ -81,7 +91,8 @@
                           <input type="text" class="form-control" name="cep">
                           <button type="submit">validar cep</button>
                       </div>
-                        <?php if(isset($_POST['cep'])){ ?>
+                        <!-- php para mostrar os campos do cep  -->
+                      
 <?php $endereco = get_endereco($_POST['cep']); ?>
                     
                     <div class="col-md-4">
@@ -103,21 +114,12 @@
                             <input type="text" class="form-control" readonly="" disabled="" placeholder="<?php echo $endereco->logradouro; ?> , <?php echo $endereco->bairro; ?> " />
                       </div>
                     </div>
-                     <?php } ?>
+                   
                     <br>
-                      
-                      
-                    
                     </div>
-                        
-                    
-                    
                       </div>
-                        
-                      
                       <br>
-                    
-                      <button type="submit" class="btn btn-success pull-right"><a href="formulario2.php">Continuar</a></button>
+                    <button type="submit" class="btn btn-success pull-right"><a href="formulario2.php">Continuar</a></button>
                     <div class="clearfix"></div>
                   </form>
                 </div>

@@ -181,13 +181,13 @@
                         <h3>Entrar no seu perfil</h3>
                         <form action="#">
                             <div class="check-date">
-                                <label for="date-in">Usuário:</label>
-                                <input type="text" class="date-input" id="date-in">
+                                <label for="text">Usuário:</label>
+                                <input type="text" class="user" id="usuario">
                                 <i class="fa fa-user"></i>
                             </div>
                             <div class="check-date">
-                                <label for="date-out">Senha:</label>
-                                <input type="text" class="date-input" id="date-out">
+                                <label for="password">Senha:</label>
+                                <input type="password" class="passwor" id="senha">
                                 <i class="fa fa-key"></i>
                             </div>
 							
