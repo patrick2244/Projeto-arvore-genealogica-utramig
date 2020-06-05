@@ -51,7 +51,7 @@
                        <div class="row">
                       <div class="col-md-12">
                           <label class="bmd-label-floating">E_mail*</label>
-                          <input type="mail" class="form-control">
+                          <input type="email" class="form-control" name="email">
                         </div>
                       </div>
                       
@@ -60,7 +60,7 @@
                       <div class="row">
                       <div class="col-md-12">
                           <label class="bmd-label-floating">senha*</label>
-                          <input type="password" class="form-control">
+                          <input type="password" class="form-control"name="senha">
                         </div>
                       </div>
                       
@@ -70,16 +70,16 @@
                     <div class="row">
                       <div class="col-md-4">
                           <label class="bmd-label-floating">Nome </label>
-                          <input type="text" class="form-control">
+                          <input type="text" class="form-control"name="nome">
                       </div>
                         
                       <div class="col-md-4">
                           <label class="bmd-label-floating">Sobrenome </label>
-                          <input type="text" class="form-control">
+                          <input type="text" class="form-control"nome="sobrenome">
                       </div>
                       <div class="col-md-4">
                           <label class="bmd-label-floating">Data de Nascimento</label>
-                          <input type="date" class="form-control">
+                          <input type="date" class="form-control"name="datanas">
                       </div>
                     </div>
                     
@@ -88,21 +88,22 @@
                     <div class="row">
                     <div class="col-md-4">
                           <label class="bmd-label-floating">CEP</label>
-                          <input type="text" class="form-control" name="cep">
+                          <input type="txt" class="form-control" name="cep">
                           <button type="submit">validar cep</button>
                       </div>
                         <!-- php para mostrar os campos do cep  -->
+                        <?php if (isset($_POST['cep'])){ ?>
                       
 <?php $endereco = get_endereco($_POST['cep']); ?>
                     
                     <div class="col-md-4">
                           <label class="bmd-label-floating">Cidade</label>
-                          <input type="text" class="form-control"readonly="" disabled="" placeholder="<?php echo $endereco->localidade; ?>"/>
+                          <input type="text" class="form-control"readonly="" disabled="" placeholder="<?php echo $endereco->localidade; ?>" name="localidade"/>
                     </div>
                         
                       <div class="col-md-4">
                           <label class="bmd-label-floating">Estado</label>
-                          <input type="text" class="form-control"readonly="" disabled="" placeholder="<?php echo $endereco->uf; ?>"/>
+                          <input type="text" class="form-control"readonly="" disabled="" placeholder="<?php echo $endereco->uf; ?>"name="uf"/>
                       </div>
                       </div>
                       
@@ -111,16 +112,18 @@
                     <div class="row">
                       <div class="col-md-12">
                           <label class="bmd-label-floating">Endereço</label>
-                            <input type="text" class="form-control" readonly="" disabled="" placeholder="<?php echo $endereco->logradouro; ?> , <?php echo $endereco->bairro; ?> " />
+                            <input type="text" class="form-control" readonly="" disabled="
+                                   " placeholder="<?php echo $endereco->logradouro; ?> , <?php echo $endereco->bairro; ?> 
+                                   " name=" endereco" />
                       </div>
                     </div>
-                   
+                   <?php } ?>
                     <br>
                     </div>
                       </div>
                       <br>
                     <button type="submit" class="btn btn-success pull-right"><a href="formulario2.php">Continuar</a></button>
-                    <div class="clearfix"></div>
+                    <div class="clearfix"></div> 
                   </form>
                 </div>
               </div>
