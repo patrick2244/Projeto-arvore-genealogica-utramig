@@ -177,17 +177,23 @@
 				
 				<!-- FORMULARIO BANNER/JAVA -->
                 <div class="col-xl-4 col-lg-5 offset-xl-2 offset-lg-1">
+                    
                     <div class="booking-form">
                         <h3>Entrar no seu perfil</h3>
                         <form action="#">
+                            
+                            
                             <div class="check-date">
                                 <label for="text">Usuário:</label>
-                                <input type="text" class="user" id="usuario">
+                                <input type="text" class="text" id="usuario">
                                 <i class="fa fa-user"></i>
                             </div>
+                            
+                            
+                          
                             <div class="check-date">
                                 <label for="password">Senha:</label>
-                                <input type="password" class="passwor" id="senha">
+                                <input type="password" class="password" id="senha">
                                 <i class="fa fa-key"></i>
                             </div>
 							

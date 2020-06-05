@@ -58,12 +58,17 @@
                       
                       <br>
                       <div class="row">
-                      <div class="col-md-12">
+                      <div class="col-md-6">
                           <label class="bmd-label-floating">senha*</label>
                           <input type="password" class="form-control"name="senha">
                         </div>
                       </div>
                       
+                      <div class="col-md-6">
+                          <label class="bmd-label-floating">Confirmar senha*</label>
+                          <input type="password" class="form-control"name="senha">
+                        </div>
+                      </div>
                       
                       <br>
                       
