@@ -2,7 +2,7 @@
 <html lang="zxx">
 
 <head>
-    <title>arvore genealogica</title>
+    <title>Árvore Genealógica</title>
     <meta http-equiv="Content-Type" content="text/html" charset=utf-8" />
     <meta name="description" content="Sona Template">
     <meta name="keywords" content="Sona, unica, creative, html">

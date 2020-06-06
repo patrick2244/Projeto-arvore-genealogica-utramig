@@ -2,6 +2,7 @@
 <html lang="zxx">
 
 <head>
+    <title>Árvore Genealógica</title>
     <meta charset="UTF-8">
     <meta name="description" content="Sona Template">
     <meta name="keywords" content="Sona, unica, creative, html">
@@ -156,7 +157,7 @@
                     <div class="row">
                       <div class="col-md-12">
                           <label >Endereço</label>
-                            <input type="text" class="form-control" id="rua"id="bairro"  />
+                            <input type="text" class="form-control" id="rua" id="bairro"  />
                       </div>
                     </div>
                    
@@ -172,7 +173,7 @@
                     
                     <div class="col-md-4">
                           <label class="bmd-label-floating">Data do Obito</label>
-                          <input type="text" class="form-control">
+                          <input type="date" class="form-control">
                       </div>
                       </div>
                         
