@@ -2,6 +2,10 @@
 <html lang="zxx">
 
 <head>
+    <?php
+    
+   
+    ?>
     <title>Árvore Genealógica</title>
     <meta http-equiv="Content-Type" content="text/html" charset=utf-8" />
     <meta name="description" content="Sona Template">
@@ -29,7 +33,7 @@
     
 
     <!-- Adicionando Javascript -->
-    <script type="text/javascript" >
+   <script type="text/javascript" >
     
     function limpa_formulário_cep() {
             //Limpa valores do formulário de cep.
@@ -37,7 +41,6 @@
             document.getElementById('uf').value=("");
             document.getElementById('rua').value=("");
             document.getElementById('bairro').value=("");
-           
             
     }
 
@@ -48,6 +51,7 @@
             document.getElementById('uf').value=(conteudo.uf);
             document.getElementById('rua').value=(conteudo.logradouro);
             document.getElementById('bairro').value=(conteudo.bairro);
+            
             
         } //end if.
         else {
@@ -70,11 +74,6 @@
 
             //Valida o formato do CEP.
             if(validacep.test(cep)) {
-
-                
-                
-
-                //Cria um elemento javascript.
                 var script = document.createElement('script');
 
                 //Sincroniza com o callback.
@@ -97,32 +96,42 @@
     };
 
     </script>
+  
+
     </head>
    
 
     <body>
+        
 <!-- Formulario 1 -->
+<div class="form-control">
+<form method="POST" action="processa.php">
     <div class="main-panel">
       <div class="content">
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-8">
+             
               <div class="card">
                 <div class="card-header card-header-primary">
                   <h4 class="card-title">Prencha seu cadastro </h4>
                   <p class="card-category">(todos os campos com sao obrigatorois)</p>
-                  <form method="get" action=".">
-                </div>
+                 </div>
+                  
                 <div class="card-body">
-                   <form method="get" action="."></form>
+    
                       
                        <div class="row">
+                           
                       <div class="col-md-12">
+                          
                           <label class="bmd-label-floating">E_mail*</label>
                           <input type="email" class="form-control" name="email">
+                       
                         </div>
+                           
                       </div>
-                      
+                  
                       
                       <br>
                       <div class="row">
@@ -130,7 +139,7 @@
                           <label class="bmd-label-floating">senha*</label>
                           <input type="password" class="form-control"name="senha">
                           <label class="bmd-label-floating">Confirmar senha*</label>
-                          <input type="password" class="form-control"name="senha">
+                          <input type="password" class="form-control">
                         </div>
                       </div>
                       
@@ -145,11 +154,11 @@
                         
                       <div class="col-md-4">
                           <label class="bmd-label-floating">Sobrenome </label>
-                          <input type="text" class="form-control"nome="sobrenome">
+                          <input type="text" class="form-control"name="sobrenome">
                       </div>
                       <div class="col-md-4">
                           <label class="bmd-label-floating">Data de Nascimento</label>
-                          <input type="date" class="form-control"name="datanas">
+                          <input type="date" class="form-control"name="data_nas">
                       </div>
                     </div>
                     
@@ -163,39 +172,48 @@
                       </div>
                       <div class="col-md-4">
                           <label >Cidade</label>
-                          <input type="text" class="form-control"  id="cidade" />
+                          <input name="cidade" type="text" value=""class="form-control"  id="cidade" />
                     </div>
                         
                       <div class="col-md-4">
                           <label >Estado</label>
-                          <input type="text" class="form-control"id="uf"/>
+                          <input type="text"name="uf" value=""class="form-control"id="uf"/>
                       </div>
                       </div>
                       
                       <br>
                       
                     <div class="row">
-                      <div class="col-md-12">
-                          <label >Endereço</label>
-                            <input type="text" class="form-control" id="rua"+ id="bairro"  />
+                      <div class="col-md-6">
+                          <label >Rua</label>
+                            <input type="text"value="" name="rua"class="form-control" id="rua"  />
                       </div>
+                        <div class="col-md-6">
+                          <label >Bairro</label>
+                            <input type="text"value="" name="bairro"class="form-control"  id="bairro" />
+                           
+                      </div>
+                        
                     </div>
                    
                     <br>
                     </div>
                       </div>
+               
                       <br>
                  
 
-                      <button type="submit" class="btn btn-success pull-right"><a href="formulario2.php">Continuar</a></button>
+                    <input type="submit"class="btn btn-success pull-right"method="POST" value="Cadastrar">
                     <div class="clearfix"></div> 
-                  
+    
                 </div>
               </div>
             </div>
         </div> 
     </div>
   </div>
+</form>
+    
 </body>
-</html>>      
+</html>
     

@@ -1,6 +1,7 @@
 <!DOCTYPE php>
 <php lang="br">
-
+<?php
+session_start();?>
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Sona Template">
@@ -135,7 +136,7 @@
                             <nav class="mainmenu">
                                 <ul>
                                     <li class="active"><a href="./index.html">Inicio</a></li>
-                                    <li><a href="formulario1.php">cadastro</a></li>
+                                    <li><a href="formulario1.php">Cadastro</a></li>
                                     <li><a href="#">Pagina</a></li>
                                     <li><a href="#">Pagina</a>
                                         <ul class="dropdown">
@@ -146,7 +147,7 @@
                                         </ul>
                                     </li>
                                     <li><a href="#">Pagina</a></li>
-                                    <li><a href="./contact.html">Contato</a></li>
+                                    <li><a href="./contact.php">Contato</a></li>
                                 </ul>
                             </nav>
                             <div class="nav-right search-switch">
