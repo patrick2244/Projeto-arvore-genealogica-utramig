@@ -136,7 +136,7 @@ session_start();?>
                             <nav class="mainmenu">
                                 <ul>
                                     <li class="active"><a href="./index.php">Inicio</a></li>
-                                    <li><a href="formulario1.php">Cadastro</a></li>
+                                    <li><a href="formulario1.php">Cadastre-se</a></li>
                                     <li><a href="#">Pagina</a></li>
                                     <li><a href="#">Pagina</a>
                                         <ul class="dropdown">
