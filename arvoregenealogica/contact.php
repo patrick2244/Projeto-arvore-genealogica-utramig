@@ -33,7 +33,7 @@
                 <div class="row">
                     <div class="col-lg-2">
                         <div class="logo">
-                            <a href="./index.html">
+                            <a href="./index.php">
                                 <img src="img/logo.png" alt="">
                             </a>
                         </div>
@@ -42,7 +42,7 @@
                         <div class="nav-menu">
                             <nav class="mainmenu">
                                 <ul>
-                                    <li class="active"><a href="./index.html">Inicio</a></li>
+                                    <li class="active"><a href="./index.php">Inicio</a></li>
                                     <li><a href="#">Pagina</a></li>
                                     <li><a href="#">Pagina</a></li>
                                     <li><a href="#">Pagina</a>
