@@ -20,6 +20,7 @@ $slq = mysqli_query($conn, $sql);
 if(mysqli_insert_id($conn)){
 	$_SESSION['msg'] = "<p style='color:green;'>Usuário cadastrado com sucesso</p>";
 	header("Location: formulario2.php");
+        mysqli_close($conn);
 }else{
 	$_SESSION['msg'] = "<p style='color:red;'>Usuário não foi cadastrado com sucesso</p>";
 	header("Location: formulario1.php");

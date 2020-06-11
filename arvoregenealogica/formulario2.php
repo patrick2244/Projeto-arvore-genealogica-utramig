@@ -35,6 +35,8 @@
     <script src="js/main.js"></script>
     <script type="text/javascript" >
     
+    
+    
     function limpa_formulário_cep() {
             //Limpa valores do formulário de cep.
             document.getElementById('cidade').value=("");
@@ -99,20 +101,36 @@
             limpa_formulário_cep();
         }
     };
-    
-    $("[name='radio_obito']").change(function(){
-        alert("teste");
+    </script>
+    <script type="text/javascript" >
+        $(document).ready(function(){
+    $("[name='radio_obito']").click(function(){
+        
+       var radio = $("[name='radio_obito']:checked").val();
+      
+      if(radio == 1){
+          $("#divObito").show();
+      }
+      else{
+           $("#divObito").hide();
+      }
+      
     });
     
+    
+    
+     });
 
     </script>
+    
     
 </head>
 
 <body>
     
 <!-- Formulario 2 -->
-    
+
+    <form action="processa 2.php" method="post">
       <div class="content">
         <div class="container-fluid">
           <div class="row">
@@ -123,12 +141,16 @@
                   <p class="card-category">(O cadastro de parentes não é obrigatorio, caso não deseje cadastrar apenas clique em continuar)</p>
                 </div>
                 <div class="card-body">
-                  <form action="" method="post">
-                      
+                    <div>
+                    <img />
+                    </div>
+               
+	
+       
                        <div class="row">
                       <div class="col-md-12">
                           <label class="bmd-label-floating">Grau de parentesco</label>
-                          <input type="text" class="form-control">
+                          <input type="text" name="grau_parent" class="form-control">
                         </div>
                       </div>
                       
@@ -137,16 +159,16 @@
                     <div class="row">
                       <div class="col-md-4">
                           <label class="bmd-label-floating">Nome do parente</label>
-                          <input type="text" class="form-control">
+                          <input name="nome_parent"type="text" class="form-control">
                       </div>
                         
                       <div class="col-md-4">
                           <label class="bmd-label-floating">Sobrenome do parente</label>
-                          <input type="text" class="form-control">
+                          <input name="sobrenome_parent" type="text" class="form-control">
                       </div>
                       <div class="col-md-4">
                           <label class="bmd-label-floating">Data de Nascimento</label>
-                          <input type="date" class="form-control">
+                          <input name="data_nas" type="date" class="form-control">
                       </div>
                     </div>
                     
@@ -189,24 +211,26 @@
                     <div class="row">
                     <div class="col-md-4">
                           <label class="bmd-label-floating">Falecido?</label>
-                          <input type="radio" name="radio_obito"/>sim
-                          <input type="radio" name="radio_obito"/> não
-                          <input type="text" class="form-control">
                           
-                    </div>
+                          <br>
+                          <br>
+                          <input type="radio" value="1" name="radio_obito"/>sim
+                          <input type="radio" value="2" name="radio_obito"/> não
+                      </div>
                         
-                    
-                    <div id="obito" class="col-md-4">
+                        <br>
+                        <div id="divObito" style="display:none;" class="col-md-4">
                           <label class="bmd-label-floating">Data do Obito</label>
-                          <input type="date" class="form-control">
+                          <input type="date" name="data_obto" class="form-control">
                       </div>
                       </div>
                         
-                      
                       <br>
-                    <button type="submit" class="btn btn-primary pull-left">Adicionar a árvore</button>
-                      <button type="submit" class="btn btn-success pull-right">Continuar</button>
-                    <div class="clearfix"></div>
+                      <br>
+                    <input type="submit"class="btn btn-success pull-right"method="POST" value="Adicionar a arvore">
+                    <div class="clearfix">
+                      <input type="submit"class="btn btn-success pull-right"method="POST" value="Cadastrar ">
+                    
                  
                 </div>
               </div>
@@ -216,7 +240,29 @@
   </div>
          </form>
      
-   
+   <input id="upload" type="file">
+        <img id="img" />
+        <script  >
+        $(document).ready(function(){
+       
+           $('#upload').chage(function(){
+            const file = $(this)[0].files[0];
+            const fileReader = new fileReader();
+            fileReader.onloadend = function(){
+                $('#img').attr('src',fileReader.result);
+            };
+            fileReader.readAsDataURL(file) ;  
+           }) ;
+            
+            
+    });
+  
+        
+        
+        
+        
+        
+    </script>
     
       </body>  
 </html>
