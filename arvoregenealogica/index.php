@@ -23,6 +23,7 @@ session_start();?>
     <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 
+
 <body>
     <!-- IGNORA
     <div class="offcanvas-menu-overlay"></div>
@@ -193,9 +194,19 @@ session_start();?>
                             
                           
                             <div class="check-date">
-                                <label for="inputPassword" class="sr-only">Senha</label>
-        <input type="password" name="senha" id="inputPassword" class="form-control" placeholder="Senha" required>
-                                <i class="fa fa-key"></i>
+                                <label  class="sr-only">Senha</label>
+        <input type="password" id="senha" name="senha" id="inputPassword" class="form-control" placeholder="Senha" required>
+                               <i class="fa fa-key" onclick="mostrarSenha()"></i>
+                                 <script>
+			function mostrarSenha(){
+				var tipo = document.getElementById("senha");
+				if(tipo.type == "password"){
+					tipo.type = "text";
+				}else{
+					tipo.type = "password";
+				}
+			}
+		</script>
                             </div>
                             
                             
@@ -221,13 +232,7 @@ session_start();?>
 							
                             <button type="submit">Entrar</button>
                         </form>
-                        <p class="text-center text-danger">
-			<?php if(isset($_SESSION['loginErro'])){
-				echo $_SESSION['loginErro'];
-				unset($_SESSION['loginErro']);
-			}?>
-		</p>
-		<p class="text-center text-success">
+                        <p class="text-center text-success">
 			<?php 
 			if(isset($_SESSION['logindeslogado'])){
 				echo $_SESSION['logindeslogado'];
@@ -235,6 +240,13 @@ session_start();?>
 			}
 			?>
 		</p>
+                        <p class="text-center text-danger">
+			<?php if(isset($_SESSION['loginErro'])){
+				echo $_SESSION['loginErro'];
+				unset($_SESSION['loginErro']);
+			}?>
+		</p>
+		
     </div> <!-- /container -->
                     </div>
                 </div>
@@ -481,6 +493,7 @@ session_start();?>
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+   
 </body>
 
 </html>
