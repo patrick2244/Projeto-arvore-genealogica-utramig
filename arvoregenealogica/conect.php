@@ -1,5 +1,13 @@
 <?php
 
-$conn= mysqli_connect('localhost','root','');
-mysqli_select_db($conn, 'argen');
+$conn= mysqli_connect('localhost','root','','argen');
+//($conn, 'argen');
+if (mysqli_connect_error()){
+    echo "nao foi possivel conectar no banco";
+    exit();
+    
+}
+ else {
+    echo 'conectado';    
+}
 ?>

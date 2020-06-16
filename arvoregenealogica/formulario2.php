@@ -141,13 +141,11 @@
                   <p class="card-category">(O cadastro de parentes não é obrigatorio, caso não deseje cadastrar apenas clique em continuar)</p>
                 </div>
                 <div class="card-body">
-                    <div>
-                    <img />
-                    </div>
-               
-	
-       
-                       <div class="row">
+                   <div >
+                       <img id="blah" src="#" alt="your image" style="width="136" height="200""/>
+    </div>                   
+                    
+                <div class="row">
                       <div class="col-md-12">
                           <label class="bmd-label-floating">Grau de parentesco</label>
                           <input type="text" name="grau_parent" class="form-control">
@@ -230,7 +228,7 @@
                     <input type="submit"class="btn btn-success pull-right"method="POST" value="Adicionar a arvore">
                     <div class="clearfix">
                       <input type="submit"class="btn btn-success pull-right"method="POST" value="Cadastrar ">
-                    
+                      <input type='file' id="imgInp" />
                  
                 </div>
               </div>
@@ -240,29 +238,31 @@
   </div>
          </form>
      
-   <input id="upload" type="file">
-        <img id="img" />
-        <script  >
-        $(document).ready(function(){
-       
-           $('#upload').chage(function(){
-            const file = $(this)[0].files[0];
-            const fileReader = new fileReader();
-            fileReader.onloadend = function(){
-                $('#img').attr('src',fileReader.result);
-            };
-            fileReader.readAsDataURL(file) ;  
-           }) ;
-            
-            
-    });
-  
+   
         
         
         
+        <script>
+  function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    
+    reader.onload = function(e) {
+      $('#blah').attr('src', e.target.result);
+    }
+    
+    reader.readAsDataURL(input.files[0]); // convert to base64 string
+  }
+}
+
+$("#imgInp").change(function() {
+  readURL(this);
+});
+</script>
         
         
-    </script>
+        
+    
     
       </body>  
 </html>

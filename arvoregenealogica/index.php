@@ -181,22 +181,24 @@ session_start();?>
                     
                     <div class="booking-form">
                         <h3>Entrar no seu perfil</h3>
-                        <form action="#">
+                        <form class="form-signin" method="POST" action="valida.php">
                             
                             
-                            <div class="check-date">
-                                <label for="text">Usuário:</label>
-                                <input type="text" class="text" id="usuario">
+                            <div class="check-date" >
+                                <label for="inputEmail" class="sr-only">Usuário:</label>
+                                <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
                                 <i class="fa fa-user"></i>
                             </div>
                             
                             
                           
                             <div class="check-date">
-                                <label for="password">Senha:</label>
-                                <input type="password" class="password" id="senha">
+                                <label for="inputPassword" class="sr-only">Senha</label>
+        <input type="password" name="senha" id="inputPassword" class="form-control" placeholder="Senha" required>
                                 <i class="fa fa-key"></i>
                             </div>
+                            
+                            
 							
 							<!-- FORMULARIO ALTERNATIVO
 							
@@ -219,6 +221,21 @@ session_start();?>
 							
                             <button type="submit">Entrar</button>
                         </form>
+                        <p class="text-center text-danger">
+			<?php if(isset($_SESSION['loginErro'])){
+				echo $_SESSION['loginErro'];
+				unset($_SESSION['loginErro']);
+			}?>
+		</p>
+		<p class="text-center text-success">
+			<?php 
+			if(isset($_SESSION['logindeslogado'])){
+				echo $_SESSION['logindeslogado'];
+				unset($_SESSION['logindeslogado']);
+			}
+			?>
+		</p>
+    </div> <!-- /container -->
                     </div>
                 </div>
 				<!-- FIM FORMULARIO BANNER/JAVA -->

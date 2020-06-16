@@ -101,13 +101,13 @@
    
 
     <body>
-        <
+        
                 
           
 
   
     <!-- Formulario 1 -->
-    <form method="POST" action="processa1.php">
+    <form method="POST" action="processa1.php" enctype="multipart/form-data">
     <div class="main-panel">
       <div class="content">
         <div class="container-fluid">
@@ -121,8 +121,9 @@
                  </div>
                   
                 <div class="card-body">
-    
-                      
+    <div >
+             <img id="blah" src="#" alt="your image" style= "width="136" height="200""/>
+    </div>                  
                        <div class="row">
                            
                       <div class="col-md-12">
@@ -199,6 +200,7 @@
                     </div>
                       <br>
                    <input type="submit"class="btn btn-success pull-right"method="POST" value="Cadastrar e continuar">
+                   <input type='file' id="imgInp" />
                    
                     </div>
                       </div>
@@ -215,7 +217,24 @@
     </div>
   
 </form>
-    <!--fim do formulario 1-->
+    <script>
+  function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    
+    reader.onload = function(e) {
+      $('#blah').attr('src', e.target.result);
+    }
+    
+    reader.readAsDataURL(input.files[0]); // convert to base64 string
+  }
+}
+
+$("#imgInp").change(function() {
+  readURL(this);
+});
+</script>
+
     
    
     
