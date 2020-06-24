@@ -31,6 +31,7 @@
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="personalizado.js"></script>
     <!-- Adicionando Javascript -->
    <script type="text/javascript" >
     
@@ -96,7 +97,6 @@
 
     </script>
   
-
     </head>
    
 
@@ -129,7 +129,7 @@
                       <div class="col-md-12">
                           
                           <label class="bmd-label-floating">E_mail*</label>
-                          <input type="email" class="form-control" name="email">
+                          <input type="email"  class="form-control" name="email" required="">
                        
                         </div>
                            
@@ -138,13 +138,34 @@
                       
                       <br>
                       <div class="row">
-                      <div class="col-md-6">
+                      <div class="col-md-6"id="impForcaSenha" id="erroSenhaForca">
+                          
                           <label class="bmd-label-floating">senha*</label>
-                          <input type="password" class="form-control"name="senha">
-                          <label class="bmd-label-floating">Confirmar senha*</label>
-                          <input type="password" class="form-control">
+                          <input id="senha" type="password" class="form-control" name="senha"required=""onkeyup="validarSenhaForca()">
+                          
+        
+                               <i class="fa fa-key" onclick="mostrarSenha()"></i>
+                                 <script>
+			function mostrarSenha(){
+				var tipo = document.getElementById("senha");
+				if(tipo.type == "password"){
+					tipo.type = "text";
+				}else{
+					tipo.type = "password";
+				}
+			}
+                        </SCRIPT>
+                             <label class="bmd-label-floating">Confirmar senha*</label>
+                          <input name="senha2" type="password" class="form-control" >
+                          <i class="fa fa-key" onclick="validarSenha()"></i>
                         </div>
                       </div>
+                      
+                      <div class='col-md-6' id="impForcaSenha"></div>
+                     <div class='col-md-6' id="erroSenhaForca"></div>
+            
+                      
+                      
                       
                       
                       <br>
@@ -152,16 +173,16 @@
                     <div class="row">
                       <div class="col-md-4">
                           <label class="bmd-label-floating">Nome </label>
-                          <input type="text" class="form-control"name="nome">
+                          <input type="text" class="form-control"name="nome"required="">
                       </div>
                         
                       <div class="col-md-4">
                           <label class="bmd-label-floating">Sobrenome </label>
-                          <input type="text" class="form-control"name="sobrenome">
+                          <input type="text" class="form-control"name="sobrenome"required="">
                       </div>
                       <div class="col-md-4">
                           <label class="bmd-label-floating">Data de Nascimento</label>
-                          <input type="date" class="form-control"name="data_nas">
+                          <input type="date" class="form-control"name="data_nas" required="">
                       </div>
                     </div>
                     
@@ -170,17 +191,17 @@
                     <div class="row">
                     <div class="col-md-4">
                           <label >CEP</label>
-                          <input type="txt"value="" class="form-control" name="cep" id="cep" onblur="pesquisacep(this.value);" />
+                          <input type="txt"value="" class="form-control" name="cep" id="cep" onblur="pesquisacep(this.value);" required=""/>
                           
                       </div>
                       <div class="col-md-4">
                           <label >Cidade</label>
-                          <input name="cidade" type="text" value=""class="form-control"  id="cidade" />
+                          <input name="cidade" type="text" value=""class="form-control"  id="cidade" required=""/>
                     </div>
                         
                       <div class="col-md-4">
                           <label >Estado</label>
-                          <input type="text"name="uf" value=""class="form-control"id="uf"/>
+                          <input type="text"name="uf" value=""class="form-control"id="uf"required=""/>
                       </div>
                       </div>
                       
@@ -189,11 +210,11 @@
                     <div class="row">
                       <div class="col-md-6">
                           <label >Rua</label>
-                            <input type="text"value="" name="rua"class="form-control" id="rua"  />
+                          <input type="text"value="" name="rua"class="form-control" id="rua" required="" />
                       </div>
                         <div class="col-md-6">
                           <label >Bairro</label>
-                            <input type="text"value="" name="bairro"class="form-control"  id="bairro" />
+                          <input type="text"value="" name="bairro"class="form-control"  id="bairro" required="" />
                            
                       </div>
                         
@@ -234,7 +255,7 @@ $("#imgInp").change(function() {
   readURL(this);
 });
 </script>
-
+ 
     
    
     

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php session_start()?>
 <html lang="zxx">
 
 <head>
@@ -127,6 +128,45 @@
 </head>
 
 <body>
+    <!-- MENU DE PAGINAS -->
+        <div class="menu-item">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="logo">
+                            <a href="./index.html">
+                                <img src="img/logo.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-10">
+                        <div class="nav-menu">
+                            <nav class="mainmenu">
+                                <ul>
+                                    <li class="active"><a href="./perfil.php">perfil</a></li>
+                                    <li><a href="formulario2.php">Cadastre seus parentes</a></li>
+                                    <li><a href="#">sua arvore </a></li>
+                                    <li><a href="#">Linha do tempo</a>
+                                        <ul class="dropdown">
+                                            <li><a href="#">Pagina</a></li>
+                                            <li><a href="#">Pagina</a></li>
+                                            <li><a href="#">Pagina</a></li>
+                                            <li><a href="#">Pagina</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Pagina</a></li>
+                                    <li><a href="./contact.php">Contato</a></li>
+                                </ul>
+                            </nav>
+                            <div class="nav-right search-switch">
+                                <i class="icon_search"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<!-- FIM MENU DE PAGINAS -->
     
 <!-- Formulario 2 -->
 
@@ -225,9 +265,7 @@
                         
                       <br>
                       <br>
-                    <input type="submit"class="btn btn-success pull-right"method="POST" value="Adicionar a arvore">
-                    <div class="clearfix">
-                      <input type="submit"class="btn btn-success pull-right"method="POST" value="Cadastrar ">
+                     <input type="submit"class="btn btn-success pull-right"method="POST" value="Cadastrar ">
                       <input type='file' id="imgInp" />
                  
                 </div>
@@ -261,7 +299,13 @@ $("#imgInp").change(function() {
 </script>
         
         
+       <?php
+	
+
         
+?>
+<br>
+<a href="sair.php">Sair</a> 
     
     
       </body>  
