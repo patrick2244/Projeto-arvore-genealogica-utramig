@@ -192,8 +192,16 @@
                           <input type="text" name="mudarnome" class="form-control">
                         </div>
                     <div class="col-md-12">
+                          <label class="bmd-label-floating">Mudar Sobrenome</label>
+                          <input type="text" name="mudarsobrenome" class="form-control">
+                        </div>
+                    <div class="col-md-12">
                           <label class="bmd-label-floating">Mudar senha</label>
                           <input type="password" name="mudarsenha" class="form-control">
+                        </div>
+                    <div class="col-md-12">
+                          <label class="bmd-label-floating">Mudar email</label>
+                          <input type="email" name="mudaremail" class="form-control">
                         </div>
                       </div>
                       

@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once ("conect.php");
 
 if((isset($_POST['email'])) && (isset($_POST['senha']))){
@@ -15,11 +16,11 @@ if((isset($_POST['email'])) && (isset($_POST['senha']))){
 		
 		//Encontrado um usuario na tabela usuário com os mesmos dados digitado no formulário
 		if($resultado){
-                 
-                    header("Location: linhadotempo.php");
-			$_SESSION['id_user'] = $resultado['id'];
+                 $_SESSION['id_user'] = $resultado['id_user'];
 			$_SESSION['nome'] = $resultado['nome'];
 			$_SESSION['email'] = $resultado['email'];
+                    header("Location: linhadotempo.php?id=".$_SESSION['id_user']);
+			
 			
                         
 		//Não foi encontrado um usuario na tabela usuário com os mesmos dados digitado no formulário

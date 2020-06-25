@@ -254,7 +254,7 @@
                     </div>
                       <br>
                    <input type="submit"class="btn btn-success pull-right"method="POST" value="Cadastrar e continuar">
-                   <input type='file' id="imgInp" />
+                   <input name="foto_perfil" type='file' id="imgInp" />
                    
                     </div>
                       </div>
