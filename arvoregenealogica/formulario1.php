@@ -101,6 +101,37 @@
    
 
     <body>
+            <div id="preloder">
+        <div class="loader"></div>
+    </div>
+ <div class="menu-item">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="logo">
+                            <a href="index.php">
+                                <img src="img/logo.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-10">
+                        <div class="nav-menu">
+                            <nav class="mainmenu">
+                                <ul>
+                                    <li class="active"><a href="./index.php">Inicio</a></li>
+                                    <li><a href="formulario1.php">Cadastre-se</a></li>
+                                   <li><a href="./contact.php">Contato</a></li>
+                                </ul>
+                            </nav>
+                            <div class="nav-right search-switch">
+                                <i class="icon_search"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<!-- FIM MENU DE PAGINAS -->
         
                 
           
@@ -122,7 +153,9 @@
                   
                 <div class="card-body">
     <div >
+        
              <img id="blah" src="#" alt="your image" style= "width="136" height="200""/>
+             
     </div>                  
                        <div class="row">
                            

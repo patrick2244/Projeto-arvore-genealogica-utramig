@@ -20,8 +20,8 @@ $id_user = $_SESSION['id_user'];
 $sql = "INSERT INTO `cad_parent` (`id_parent`, `grau_parent`, `nome_parent`, `sobrenome_parent`, `data_nas`, `cep`, `cidade`, `uf`, `rua`, `bairro`,`falecido`,`data_obt`,`id_user`) VALUES (NULL, '$grau_parent', '$nome_parent', '$sobrenome_parent', '$data_nas', '$cep', '$cidade', '$uf', '$rua', '$bairro','$falecido','$data_obto',$id_user)";
 $slq = mysqli_query($conn, $sql);
 if(mysqli_insert_id($conn)){
-	$_SESSION['msg'] = "<p style='color:green;'>Usuário cadastrado com sucesso</p>";
-	header("Location: index.php");
+	$_SESSION['msg'] = "<p style='color:green;'>Parente cadastrado com sucesso</p>";
+	/*header("Location: arvore.php");*/
         
         mysqli_close($conn);
 }else{

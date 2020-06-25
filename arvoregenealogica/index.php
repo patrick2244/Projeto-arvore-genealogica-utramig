@@ -37,7 +37,7 @@
                 <div class="row">
                     <div class="col-lg-2">
                         <div class="logo">
-                            <a href="./index.html">
+                            <a href="index.php">
                                 <img src="img/logo.png" alt="">
                             </a>
                         </div>
@@ -48,17 +48,7 @@
                                 <ul>
                                     <li class="active"><a href="./index.php">Inicio</a></li>
                                     <li><a href="formulario1.php">Cadastre-se</a></li>
-                                    <li><a href="#">Pagina</a></li>
-                                    <li><a href="#">Pagina</a>
-                                        <ul class="dropdown">
-                                            <li><a href="#">Pagina</a></li>
-                                            <li><a href="#">Pagina</a></li>
-                                            <li><a href="#">Pagina</a></li>
-                                            <li><a href="#">Pagina</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Pagina</a></li>
-                                    <li><a href="./contact.php">Contato</a></li>
+                                   <li><a href="./contact.php">Contato</a></li>
                                 </ul>
                             </nav>
                             <div class="nav-right search-switch">
@@ -118,28 +108,6 @@
 			}
 		</script>
                             </div>
-                            
-                            
-							
-							<!-- FORMULARIO ALTERNATIVO
-							
-                            <div class="select-option">
-                                <label for="guest"> </label>
-                                <select id="guest">
-                                    <option value=""> </option>
-                                    <option value=""> </option>
-                                </select>
-                            </div>
-                            <div class="select-option">
-                                <label for="room"> </label>
-                                <select id="room">
-                                    <option value=""> </option>
-                                    <option value=""> </option>
-                                </select>
-                            </div>
-							
-							FIM FORMULARIO ALTERNATIVO -->
-							
                             <button type="submit">Entrar</button>
                             <?php
 			 if(isset($_SESSION['loginErro'])){
@@ -292,25 +260,7 @@
                 </div>
 				<br />
 				
-				<!--
-                <div class="col-lg-6">
-                    <div class="about-pic">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <img src="img/about/about-1.jpg" alt="">
-                            </div>
-                            <div class="col-sm-6">
-                                <img src="img/about/about-2.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-				-->	
-				
-            </div>
-        </div>
-    </section>
-    <!-- SEGUNDA/MODELO CAIXA DE CONTEUDO -->
+			
 
 
 
@@ -327,15 +277,7 @@
                                 </a>
                             </div>
                             <p>Sua Árvore Genealógica totalmente virtual</p>
-							<!-- ICONES REDE SOCIAL 
-                            <div class="fa-social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-tripadvisor"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-youtube-play"></i></a>
-                            </div>
-							 ICONES REDE SOCIAL  -->
+							
                         </div>
                     </div>
                     <div class="col-lg-3 offset-lg-1">

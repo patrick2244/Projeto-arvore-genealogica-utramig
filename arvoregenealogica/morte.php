@@ -1,10 +1,10 @@
-<!DOCTYPE php>
+<!DOCTYPE html>
 <html lang="br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Sona Template">
-    <meta name="keywords" content="Sona, unica, creative, php">
+    <meta name="keywords" content="Sona, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Árvore Genealógica</title>
@@ -23,15 +23,15 @@
 </head>
 
 <body>
-    <div id="preloder">
-        <div class="loader"></div>
-    </div>
- <div class="menu-item">
+  <header class="header-section">
+    <!-- BARRA DE USUARIO LOGADO -->
+    <!-- MENU DE PAGINAS -->
+        <div class="menu-item">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-2">
                         <div class="logo">
-                            <a href="index.php">
+                            <a href="./index.html">
                                 <img src="img/logo.png" alt="">
                             </a>
                         </div>
@@ -40,9 +40,19 @@
                         <div class="nav-menu">
                             <nav class="mainmenu">
                                 <ul>
-                                    <li class="active"><a href="./index.php">Inicio</a></li>
-                                    <li><a href="formulario1.php">Cadastre-se</a></li>
-                                   <li><a href="./contact.php">Contato</a></li>
+                                    <li class="active"><a href="linha do tempo.php">Linha do Tempo</a></li>
+                                    <li><a href="formulario2.php">Cadastre seus parentes</a></li>
+                                    <li><a href="#">sua arvore </a></li>
+                                    <li><a href="#">perfil</a>
+                                        <ul class="dropdown">
+                                            <li><a href="#">configuraçao</a></li>
+                                            <li><a href="#">Editar Perfil</a></li>
+                                            <li><a href="#">Pagina</a></li>
+                                            <li><a href="sair.php">Sair</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Pagina</a></li>
+                                    <li><a href="./contact.php">Contato</a></li>
                                 </ul>
                             </nav>
                             <div class="nav-right search-switch">
@@ -55,61 +65,159 @@
         </div>
 		<!-- FIM MENU DE PAGINAS -->
 		
-    <!-- Contact Section Begin -->
-    <section class="contact-section spad">
+    </header>
+    <!-- Header End -->
+	
+	<!-- TITULO -->
+	<br /> <br /> <br />
+    <div class="breadcrumb-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
-                    <div class="contact-text">
-                        <h2>Dúvidas sobre sua Árvore Virtual?</h2>
-                        <p>texto elaborativo, colocar depois...</p>
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td class="c-o">Endereço:</td>
-                                    <td>Av. Afonso Pena, 3400 - Cruzeiro - BH</td>
-                                </tr>
-                                <tr>
-                                    <td class="c-o">Telefone:</td>
-                                    <td>(31) 3263-7500</td>
-                                </tr>
-                                <tr>
-                                    <td class="c-o">Email:</td>
-                                    <td>faleconosco@utramig.mg.gov.br</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                <div class="col-lg-12">
+                    <div class="breadcrumb-text">
+                        <h2>Cunha é encontrado mais em:</h2>
                     </div>
                 </div>
-                <div class="col-lg-7 offset-lg-1">
-                    <form action="#" class="contact-form">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <input type="text" placeholder="Seu Nome">
-                            </div>
-                            <div class="col-lg-6">
-                                <input type="text" placeholder="Seu Email">
-                            </div>
-                            <div class="col-lg-12">
-                                <textarea placeholder="Sua dúvida"></textarea>
-                                <button type="submit">Enviar</button>
-                            </div>
+            </div>
+        </div>
+    </div>
+    <!-- TITULO -->
+
+	<!-- CAIXA DE CONTEUDO 2 -->
+    <section class="rooms-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="room-item2">
+                        <img src="img/mapas/brasil.png" alt="">
+                        <div class="ri-text">		
+                            <h3>Brasil<span></span></h3>
+							<br />
+							<!-- Linha 1-->
+							<h4>39,138 na Árvore Familiar</h4>
+							<h2> </h4>
+							<hr>
                         </div>
-                    </form>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="room-item2">
+                        <img src="img/mapas/portugal.png" alt="">
+                        <div class="ri-text">		
+                            <h3>Portugal<span></span></h3>
+							<br />
+							<!-- Linha 1-->
+							<h4>10,534 na Árvore Familiar</h4>
+							<h2> </h4>
+							<hr>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="room-item2">
+                        <img src="img/mapas/eua.png" alt="">
+                        <div class="ri-text">		
+                            <h3>Estados Unidos da América<span></span></h3>
+							<br />
+							<!-- Linha 1-->
+							<h4>606 na Árvore Familiar</h4>
+							<h2> </h4>
+							<hr>
+                        </div>
+                    </div>
                 </div>
             </div>
-			
-			<!--
-            <div class="map">
-                <iframe
-                    src=""
-                    height="470" style="border:0;" allowfullscreen=""></iframe>
-            </div>
-			-->
-			
         </div>
     </section>
-    <!-- Contact Section End -->
+    <!-- CAIXA DE CONTEUDO 2 -->
+
+    <!-- TITULO -->
+    <div class="breadcrumb-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-text">
+                        <h2>Os melhores resultados de pessoas<br /> com o nome de Igor Cunha<br /> na árvore familiar <br />compartilhada</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- TITULO -->
+	
+    <!-- CAIXA DE CONTEUDO -->
+    <section class="rooms-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="room-item">
+                        <img src="img/morte/1.png" alt="">
+                        <div class="ri-text">		
+                            <h3>Igor Oliveira<span></span></h3>
+							<br />
+							<!-- Linha 1-->
+							<h4>Nascimento</h4>
+							<h2>Belo Horizonte, Minas Gerais, Brasil</h4>
+							
+							<br />
+							<!-- Linha 2-->
+							<h4>Falecimento</h4>
+							<h2>2020 - Contagem / MG</h4>
+							<hr>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="room-item">
+                        <img src="img/morte/1.png" alt="">
+                        <div class="ri-text">		
+                            <h3>Milena Cunha<span></span></h3>
+							<br />
+							<!-- Linha 1-->
+							<h4>Nascimento</h4>
+							<h2>Sabará, Minas Gerais, Brasil</h4>
+							
+							<br />
+							<!-- Linha 2-->
+							<h4>Falecimento</h4>
+							<h2>2020 - Belo Horizonte / MG</h4>
+							<hr>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="room-item">
+                        <img src="img/morte/1.png" alt="">
+                        <div class="ri-text">		
+                            <h3>Henrique Oliveira<span></span></h3>
+							<br />
+							<!-- Linha 1-->
+							<h4>Nascimento</h4>
+							<h2>Orlando, EUA</h4>
+							
+							<br />
+							<!-- Linha 2-->
+							<h4>Falecimento</h4>
+							<h2>2020 - Belo Horizonte / MG</h4>
+							<hr>                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PAGINAÇÃO
+                <div class="col-lg-12">
+                    <div class="room-pagination">
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">Next <i class="fa fa-long-arrow-right"></i></a>
+                    </div>
+                </div>				
+				-->
+				
+            </div>
+        </div>
+    </section>
+    <!-- CAIXA DE CONTEUDO -->
 
     <!-- RODAPE -->
     <footer class="footer-section">

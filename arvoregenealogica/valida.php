@@ -9,22 +9,22 @@ if((isset($_POST['email'])) && (isset($_POST['senha']))){
                 
 			
 		//Buscar na tabela usuario o usuário que corresponde com os dados digitado no formulário
-		$result_usuario = "SELECT * FROM cad_user WHERE email = '$email' && senha = '$senha' LIMIT 1";
+		$result_usuario = "SELECT * FROM cad_user WHERE email = '$email' && senha = '$senha' ";
 		$resultado_usuario = mysqli_query($conn, $result_usuario);
                $resultado = mysqli_fetch_assoc($resultado_usuario);
 		
 		//Encontrado um usuario na tabela usuário com os mesmos dados digitado no formulário
-		if(isset($resultado)){
+		if($resultado){
                  
-                    header("Location: formulario2.php");
+                    header("Location: linhadotempo.php");
 			$_SESSION['id_user'] = $resultado['id'];
 			$_SESSION['nome'] = $resultado['nome'];
 			$_SESSION['email'] = $resultado['email'];
-			}
+			
                         
 		//Não foi encontrado um usuario na tabela usuário com os mesmos dados digitado no formulário
 		//redireciona o usuario para a página de login
-		else{	
+                }else{	
 			//Váriavel global recebendo a mensagem de erro
 			$_SESSION['loginErro'] = "Usuário ou senha Inválido";
                        

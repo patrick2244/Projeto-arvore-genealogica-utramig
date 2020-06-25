@@ -128,13 +128,15 @@
 </head>
 
 <body>
+    <header class="header-section">
+    <!-- BARRA DE USUARIO LOGADO -->
     <!-- MENU DE PAGINAS -->
         <div class="menu-item">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-2">
                         <div class="logo">
-                            <a href="./index.html">
+                            <a href="linhadotempo.php">
                                 <img src="img/logo.png" alt="">
                             </a>
                         </div>
@@ -143,19 +145,18 @@
                         <div class="nav-menu">
                             <nav class="mainmenu">
                                 <ul>
-                                    <li class="active"><a href="./perfil.php">perfil</a></li>
+                                    <li class="active"><a href="linhadotempo.php">Linha do Tempo</a></li>
                                     <li><a href="formulario2.php">Cadastre seus parentes</a></li>
                                     <li><a href="#">sua arvore </a></li>
-                                    <li><a href="#">Linha do tempo</a>
+                                    <li><a href="perfil.php">perfil</a>
                                         <ul class="dropdown">
-                                            <li><a href="#">Pagina</a></li>
-                                            <li><a href="#">Pagina</a></li>
-                                            <li><a href="#">Pagina</a></li>
-                                            <li><a href="#">Pagina</a></li>
+                                            <li><a href="#">configuraçao</a></li>
+                                            <li><a href="editarperfil.php">Editar Perfil</a></li>
+                                            <li><a href="sair.php">Sair</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">Pagina</a></li>
-                                    <li><a href="./contact.php">Contato</a></li>
+                                    
+                                    <li><a href="contato2.php">Contato</a></li>
                                 </ul>
                             </nav>
                             <div class="nav-right search-switch">
@@ -299,13 +300,9 @@ $("#imgInp").change(function() {
 </script>
         
         
-       <?php
-	
+       
 
-        
-?>
-<br>
-<a href="sair.php">Sair</a> 
+
     
     
       </body>  
