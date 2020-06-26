@@ -1,8 +1,21 @@
 <!DOCTYPE html>
-<?php session_start()?>
-<html lang="zxx">
+<?php
 
-<head>
+session_start();
+//include_once("valida.php");
+include_once("conect.php");
+//die();
+$sql = mysqli_query($conn,"Select * From cad_user where id_user = ".$_SESSION['id_user']);
+$exibe = mysqli_fetch_assoc($sql);
+
+?>
+ 	
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+       
     <title>Árvore Genealógica</title>
     <meta charset="UTF-8">
     <meta name="description" content="Sona Template">
@@ -35,8 +48,13 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
     <script type="text/javascript" ></script>
-        <body>
-        <header class="header-section">
+
+    
+    
+</head>
+
+<body>
+    <header class="header-section">
     <!-- BARRA DE USUARIO LOGADO -->
     <!-- MENU DE PAGINAS -->
         <div class="menu-item">
@@ -55,7 +73,7 @@
                                 <ul>
                                     <li class="active"><a href="linhadotempo.php">Linha do Tempo</a></li>
                                     <li><a href="formulario2.php">Cadastre seus parentes</a></li>
-                                    <li><a href="#">sua arvore </a></li>
+                                    <li><a href="arvore.php">sua arvore </a></li>
                                     <li><a href="perfil.php">perfil</a>
                                         <ul class="dropdown">
                                             <li><a href="#">configuraçao</a></li>
@@ -75,6 +93,119 @@
                 </div>
             </div>
         </div>
-		<!-- FIM MENU DE PAGINAS -->
-                 </body>  
+		<!-- FIM MENU DE PAGINAS -->  
+    
+<?php
+if (isset($_SESSION['id_user']))?>
+                <form method="post" action="linhadotempo.php"  >
+                    <center>
+            
+                     <textarea placeholder="oq vc esta pensando??"name="postagem" rows="10" cols="70"></textarea>
+                 <br>
+                        <input type="submit"class="btn btn-success pull-center"method="POST" value="postar"  >
+                   
+                    
+                </form>                 
+                    
+<?php
+$post=filter_input(INPUT_POST,'postagem', FILTER_SANITIZE_EMAIL);
+$sql = "INSERT INTO `post`(`postagem`) VALUES ('$post')";
+$slq = mysqli_query($conn, $sql);
+?>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <?php
+
+$sql="select*from post";
+ $resultados = mysqli_query($conn, $sql);
+ 
+ 
+ if(mysqli_num_rows($resultados)){
+     while ($linha= mysqli_fetch_assoc($resultados)){
+         
+         echo '<br><br>';
+         echo $exibe["nome"].' : '. $linha["postagem"]. '  ';
+           echo '<br><br>';
+  }
+     
+     
+     
+ } else {
+     echo 'nao encontrou';
+     
+}
+?>
+  </center>
+                    <!-- RODAPE -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-text">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="ft-about">
+                            <div class="logo">
+                                <a href="#">
+                                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <img src="img/logo.png" alt="">
+                                </a>
+                            </div>
+                            <p>Sua Árvore Genealógica totalmente virtual</p>
+							
+                        </div>
+                    </div>
+                    <div class="col-lg-3 offset-lg-1">
+                        <div class="ft-contact">
+                            <h6>Contate-nos</h6>
+                            <ul>
+                                <li>(31) 3263-7500</li>
+                                <li>faleconosco@utramig.mg.gov.br</li>
+                                <li>Av. Afonso Pena, 3400 - Cruzeiro, Belo Horizonte - MG</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 offset-lg-1">
+                        <div class="ft-newslatter">
+                            <h6>Fique por dentro</h6>
+                            <p>Receba informacões sobre sua Árvore</p>
+                            <form action="#" class="fn-form">
+                                <input type="text" placeholder="Email">
+                                <button type="submit"><i class="fa fa-send"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-option">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <ul>
+                            <li><a href="#">Página Inicial</a></li>
+                            <li><a href="#">Cadastre-se</a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="co-text"><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> <i class="" aria-hidden="true"></i> by TCC</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- RODAPE -->
+  </body>
+
+
+		
+		
 </html>
