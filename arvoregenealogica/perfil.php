@@ -89,7 +89,7 @@ $exibe = mysqli_fetch_assoc($sql);
                 </div>
                 <div class="card-body">
                    <div >
-                       <img id="blah" src="#" alt="foto perfil" style="width="136" height="200""/>
+                       <img id="foto" src="#" alt="foto perfil" style="width="136" height="200""/>
     </div>                   
                     
                 <div class="row">
@@ -152,7 +152,7 @@ $exibe = mysqli_fetch_assoc($sql);
     var reader = new FileReader();
     
     reader.onload = function(e) {
-      $('#blah').attr('src', e.target.result);
+      $('foto=<?php echo $exibe["foto_perfil"];?>').attr('src', e.target.result);
     }
     
     reader.readAsDataURL(input.files[0]); // convert to base64 string

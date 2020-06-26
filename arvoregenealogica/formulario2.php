@@ -188,8 +188,14 @@
                     
                 <div class="row">
                       <div class="col-md-12">
-                          <label class="bmd-label-floating">Grau de parentesco</label>
-                          <input type="text" name="grau_parent" class="form-control">
+                         <label class="bmd-label-floating">Grau de parentesco</label>
+                     
+                         <select type="text" name="grau_parent" class="form-control">
+                             <option value="valor0"selected>escolher Parentesco</option> 
+  <option value="valor1">Mae</option> 
+  <option value="valor2" >Pai</option>
+  <option value="valor3">Avôs(ós)</option>
+</select>
                         </div>
                       </div>
                       
