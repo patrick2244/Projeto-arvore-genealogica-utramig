@@ -1,3 +1,14 @@
+<?php
+session_start();
+//include_once("valida.php");
+include_once("conect.php");
+//die();
+$sql = mysqli_query($conn,"Select * From cad_user where id_user = ".$_SESSION['id_user']);
+$exibe = mysqli_fetch_assoc($sql);
+
+?>
+
+
 <html>
 	<head>
        
@@ -79,3 +90,72 @@
             </div>
         </div>
 		<!-- FIM MENU DE PAGINAS -->
+<!-- CAIXA DE CONTEUDO -->
+    <section class="rooms-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="room-item">
+                        <img src="" alt="">
+                        <div class="ri-text">		
+                            <h3><?php echo $exibe["nome"];?>  <?php echo $exibe["sobrenome"];?><span></span></h3>
+							<br />
+							<!-- Linha 1-->
+							<h4>Nascimento</h4>
+							<h2><?php echo$exibe["data_nas"];?></h4>
+							
+							<br />
+							<!-- Linha 2-->
+							<h4>Falecimento</h4>
+							<h2>2020 - Contagem / MG</h4>
+							<hr> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+                     
+                
+                
+  <?php              
+   $sql="select*from cad_parent";
+ $resultados = mysqli_query($conn, $sql);
+ $sql = mysqli_query($conn,"Select * From cad_parent where id_user = ".$_SESSION['id_user']);
+$exibe = mysqli_fetch_assoc($sql);?>
+<?php
+ if(mysqli_num_rows($resultados)){    
+     
+?>
+                
+    <section class="rooms-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="room-item">
+                        <img src="" alt="">
+                        <div class="ri-text">
+                            
+                            <h3><?php echo $exibe["nome_parent"];?>  <?php echo $exibe["sobrenome_parent"];?><span></span></h3>
+							<br />
+							<!-- Linha 1-->
+							<h4>Nascimento</h4>
+							<h2><?php echo$exibe["data_nas"];?></h4>
+							
+							<br />
+							<!-- Linha 2-->
+							<h4>Falecimento</h4>
+							<h2>2020 - Contagem / MG</h4>
+							<hr> 
+                                                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>                                          
+  <?php                                                      
+ }else {
+echo' parente nao cadastrado';
+}
+ 
+ ?>
+

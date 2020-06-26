@@ -21,7 +21,7 @@ $sql = "INSERT INTO `cad_parent` (`id_parent`, `grau_parent`, `nome_parent`, `so
 $slq = mysqli_query($conn, $sql);
 if(mysqli_insert_id($conn)){
 	$_SESSION['msg'] = "<p style='color:green;'>Parente cadastrado com sucesso</p>";
-	/*header("Location: arvore.php");*/
+	header("Location: arvore.php");
         
         mysqli_close($conn);
 }else{
