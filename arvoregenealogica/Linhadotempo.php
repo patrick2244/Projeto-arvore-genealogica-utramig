@@ -112,9 +112,7 @@ if (isset($_SESSION['id_user']))?>
 
 $sql= " select * from post order by id_postagem  ";
  $resultados = mysqli_query($conn, $sql);
- 
- 
- if(mysqli_num_rows($resultados)){
+if(mysqli_num_rows($resultados)){
      while ($linha= mysqli_fetch_assoc($resultados)){
          echo ' <div class="co-text"> ';
          echo '<br><br>';

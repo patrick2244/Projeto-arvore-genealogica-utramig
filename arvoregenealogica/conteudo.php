@@ -18,7 +18,7 @@ if(mysqli_insert_id($conn)){
         mysqli_close($conn);
 }else{
 	$_SESSION['msg'] = "<p style='color:red;'>Usuário não foi cadastrado com sucesso</p>";
-	header("Location: Linhadoempo.php");
+	header("Location: Linhadotempo.php");
 }
 ?>
 ?>

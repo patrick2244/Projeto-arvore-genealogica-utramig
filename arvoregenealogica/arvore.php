@@ -112,6 +112,7 @@ $exibe = mysqli_fetch_assoc($sql);
         </div>
 		<!-- FIM MENU DE PAGINAS -->  
 <!-- CAIXA DE CONTEUDO -->
+
     <section class="rooms-section spad">
         <div class="container">
             <div class="row">
@@ -121,6 +122,7 @@ $exibe = mysqli_fetch_assoc($sql);
                         <div class="ri-text">		
                             <h3><?php echo $exibe["nome"];?>  <?php echo $exibe["sobrenome"];?><span></span></h3>
 							<br />
+                                                        
 							<!-- Linha 1-->
 							<h4>Nascimento</h4>
 							<h2><?php echo$exibe["data_nas"];?></h4>
@@ -131,6 +133,7 @@ $exibe = mysqli_fetch_assoc($sql);
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section> 
                      
@@ -145,6 +148,9 @@ $exibe = mysqli_fetch_assoc($sql);
  while($linha = mysqli_fetch_assoc($sql)){    
     
 ?>
+<div style="position: relative;
+  dow: 100;
+  ">
  <section class="rooms-section spad">
         <div class="container">
             <div class="row">
@@ -156,6 +162,8 @@ $exibe = mysqli_fetch_assoc($sql);
                             <h3><?php echo $linha["nome_parent"];?>  <?php echo $linha["sobrenome_parent"];?><span></span></h3>
 							<br />
 							<!-- Linha 1-->
+                                                        <h4>Parentesco</h4>
+							<h2><?php echo$linha["grau_parent"];?></h4>
 							<h4>Nascimento</h4>
 							<?php echo$linha["data_nas"];?>
 							
@@ -169,7 +177,8 @@ $exibe = mysqli_fetch_assoc($sql);
                 </div>
             </div>
         </div>
-    </section>                                          
+    </section>  
+</div>>
   <?php                                                      
     
 }
