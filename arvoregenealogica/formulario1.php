@@ -154,7 +154,9 @@
                 <div class="card-body">
     <div >
         
-   </div>                  
+             <img id="blah" src="#" alt="your image" style= "width="136" height="200""/>
+             
+    </div>                  
                        <div class="row">
                            
                       <div class="col-md-12">
@@ -186,11 +188,20 @@
 				}
 			}
                         </SCRIPT>
-                             
+                             <label class="bmd-label-floating">Confirmar senha*</label>
+                          <input name="senha2" type="password" class="form-control" >
+                          <i class="fa fa-key" onclick="validarSenha()"></i>
+                        </div>
+                      </div>
                       
                       <div class='col-md-6' id="impForcaSenha"></div>
                      <div class='col-md-6' id="erroSenhaForca"></div>
-                    <br>
+            
+                      
+                      
+                      
+                      
+                      <br>
                       
                     <div class="row">
                       <div class="col-md-4">
@@ -260,7 +271,23 @@
     </div>
   
 </form>
+    <script>
+  function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
     
+    reader.onload = function(e) {
+      $('#blah').attr('src', e.target.result);
+    }
+    
+    reader.readAsDataURL(input.files[0]); // convert to base64 string
+  }
+}
+
+$("#imgInp").change(function() {
+  readURL(this);
+});
+</script>
  
     
    

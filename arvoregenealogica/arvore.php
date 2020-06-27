@@ -88,16 +88,17 @@ $exibe = mysqli_fetch_assoc($sql);
                         <div class="nav-menu">
                             <nav class="mainmenu">
                                 <ul>
-                                    <li class="active"><a href="linhadotempo.php">Linha do Tempo</a></li>
-                                    <li><a href="formulario2.php">Cadastre seus parentes</a></li>
-                                    <li><a href="arvore.php">sua arvore </a></li>
-                                    <li><a href="perfil.php">perfil</a>
+                                    <li><a href="perfil.php"> <img id="arquivo" src="foto_perfil/<?php echo $exibe["nome_imagem"];?>" alt="foto perfil" style="width:40" height="40"/><?php echo $exibe["nome"];?>  </a>
                                         <ul class="dropdown">
                                             <li><a href="#">configuraçao</a></li>
                                             <li><a href="editarperfil.php">Editar Perfil</a></li>
                                             <li><a href="sair.php">Sair</a></li>
                                         </ul>
                                     </li>
+                                    <li class="active"><a href="linhadotempo.php">Linha do Tempo</a></li>
+                                    <li><a href="formulario2.php">Cadastre seus parentes</a></li>
+                                    <li><a href="arvore.php">Sua Arvore </a></li>
+                                    
                                     
                                     <li><a href="contato2.php">Contato</a></li>
                                 </ul>
@@ -111,6 +112,7 @@ $exibe = mysqli_fetch_assoc($sql);
             </div>
         </div>
 		<!-- FIM MENU DE PAGINAS -->  
+    
 <!-- CAIXA DE CONTEUDO -->
 
     <section class="rooms-section spad">
@@ -148,15 +150,13 @@ $exibe = mysqli_fetch_assoc($sql);
  while($linha = mysqli_fetch_assoc($sql)){    
     
 ?>
-<div style="position: relative;
-  dow: 100;
-  ">
+
  <section class="rooms-section spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <div class="room-item">
-                        <img src="" alt="">
+                        <img src="foto_parent/<?php echo $linha["nome_imagem_parent"];?>" alt="">
                         <div class="ri-text">
                             
                             <h3><?php echo $linha["nome_parent"];?>  <?php echo $linha["sobrenome_parent"];?><span></span></h3>
@@ -178,7 +178,7 @@ $exibe = mysqli_fetch_assoc($sql);
             </div>
         </div>
     </section>  
-</div>>
+</div>
   <?php                                                      
     
 }

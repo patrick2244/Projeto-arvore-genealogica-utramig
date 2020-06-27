@@ -1,7 +1,22 @@
 <!DOCTYPE html>
-<?php session_start()?>
-<html lang="zxx">
+<?php
 
+session_start();
+//include_once("valida.php");
+include_once("conect.php");
+//die();
+$sql = mysqli_query($conn,"Select * From cad_user where id_user = ".$_SESSION['id_user']);
+$exibe = mysqli_fetch_assoc($sql);
+
+?>
+<html lang="zxx">
+    <style>
+    
+        
+        
+        
+        
+    </style>
 <head>
     <title>Árvore Genealógica</title>
     <meta charset="UTF-8">
@@ -145,16 +160,17 @@
                         <div class="nav-menu">
                             <nav class="mainmenu">
                                 <ul>
-                                    <li class="active"><a href="linhadotempo.php">Linha do Tempo</a></li>
-                                    <li><a href="formulario2.php">Cadastre seus parentes</a></li>
-                                    <li><a href="arvore.php">sua arvore </a></li>
-                                    <li><a href="perfil.php">perfil</a>
+                                    <li><a href="perfil.php"> <img id="arquivo" src="foto_perfil/<?php echo $exibe["nome_imagem"];?>" alt="foto perfil" style="width:40" height="40"/><?php echo $exibe["nome"];?>  </a>
                                         <ul class="dropdown">
                                             <li><a href="#">configuraçao</a></li>
                                             <li><a href="editarperfil.php">Editar Perfil</a></li>
                                             <li><a href="sair.php">Sair</a></li>
                                         </ul>
                                     </li>
+                                    <li class="active"><a href="linhadotempo.php">Linha do Tempo</a></li>
+                                    <li><a href="formulario2.php">Cadastre seus parentes</a></li>
+                                    <li><a href="arvore.php">Sua Arvore </a></li>
+                                    
                                     
                                     <li><a href="contato2.php">Contato</a></li>
                                 </ul>
@@ -167,11 +183,13 @@
                 </div>
             </div>
         </div>
-		<!-- FIM MENU DE PAGINAS --> 
+		<!-- FIM MENU DE PAGINAS -->  
+    
     
 <!-- Formulario 2 -->
-
-    <form action="processa 2.php" method="post" enctype="multipart/form-data">
+<div class="version">
+    
+<form method="POST" action="processa 2.php" enctype="multipart/form-data">
       <div class="content">
         <div class="container-fluid">
           <div class="row">
@@ -183,7 +201,7 @@
                 </div>
                 <div class="card-body">
                    <div >
-                       <img id="blah" src="#" alt="your image" style="width="136" height="200""/>
+                       
     </div>                   
                     
                 <div class="row">
@@ -274,7 +292,7 @@
                       <br>
                       <br>
                      <input type="submit"class="btn btn-success pull-right"method="POST" value="Cadastrar ">
-                      <input type='file' id="imgInp" />
+                     <input name="arquivo" type='file' id="imgInp" />
                  
                 </div>
               </div>
@@ -283,28 +301,12 @@
     </div>
   </div>
          </form>
-     
+</div>   
    
         
         
         
-        <script>
-  function readURL(input) {
-  if (input.files && input.files[0]) {
-    var reader = new FileReader();
-    
-    reader.onload = function(e) {
-      $('#blah').attr('src', e.target.result);
-    }
-    
-    reader.readAsDataURL(input.files[0]); // convert to base64 string
-  }
-}
-
-$("#imgInp").change(function() {
-  readURL(this);
-});
-</script>
+        
 <!-- RODAPE -->
     <footer class="footer-section">
         <div class="container">

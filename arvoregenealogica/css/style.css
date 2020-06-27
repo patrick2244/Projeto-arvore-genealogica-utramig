@@ -152,15 +152,6 @@ ul, ol {
 }
 /* buttons */
 
-
-
-
-
-
-/*---------------------
-  imput linha do tempo
------------------------*/
-
 /*---------------------
   CONFIG DO BOTAO COM O TRAÇO LARANJA EMBAIXO
 -----------------------*/
@@ -368,6 +359,17 @@ ul, ol {
 	font-weight: 700;
 	padding: 16px 28px 15px;
 	background: #dfa974;
+	color: #ffffff;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.top-nav .tn-right .bk-btn2 {
+	display: inline-block;
+	font-size: 13px;
+	font-weight: 700;
+	padding: 16px 28px 15px;
+	background: #85B807;
 	color: #ffffff;
 	text-transform: uppercase;
 	letter-spacing: 2px;
@@ -2466,6 +2468,19 @@ ul, ol {
 		text-transform: uppercase;
 		letter-spacing: 2px;
 	}
+	
+	.offcanvas-menu-wrapper .header-configure-area .bk-btn2 {
+		display: inline-block;
+		font-size: 13px;
+		font-weight: 700;
+		padding: 16px 28px 15px;
+		background: #85B807;
+		color: #ffffff;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+	}
+	
+	
 	.offcanvas-menu-wrapper .mainmenu {
 		display: none;
 	}

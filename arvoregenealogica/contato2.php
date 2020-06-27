@@ -1,4 +1,13 @@
-<!DOCTYPE php>
+<?php
+
+session_start();
+//include_once("valida.php");
+include_once("conect.php");
+//die();
+$sql = mysqli_query($conn,"Select * From cad_user where id_user = ".$_SESSION['id_user']);
+$exibe = mysqli_fetch_assoc($sql);
+
+?><!DOCTYPE php>
 <html lang="br">
 
 <head>
@@ -40,16 +49,17 @@
                         <div class="nav-menu">
                             <nav class="mainmenu">
                                 <ul>
-                                    <li class="active"><a href="linhadotempo.php">Linha do Tempo</a></li>
-                                    <li><a href="formulario2.php">Cadastre seus parentes</a></li>
-                                    <li><a href="arvore.php">sua arvore </a></li>
-                                    <li><a href="perfil.php">perfil</a>
+                                    <li><a href="perfil.php"> <img id="arquivo" src="foto_perfil/<?php echo $exibe["nome_imagem"];?>" alt="foto perfil" style="width:40" height="40"/><?php echo $exibe["nome"];?>  </a>
                                         <ul class="dropdown">
                                             <li><a href="#">configuraçao</a></li>
                                             <li><a href="editarperfil.php">Editar Perfil</a></li>
                                             <li><a href="sair.php">Sair</a></li>
                                         </ul>
                                     </li>
+                                    <li class="active"><a href="linhadotempo.php">Linha do Tempo</a></li>
+                                    <li><a href="formulario2.php">Cadastre seus parentes</a></li>
+                                    <li><a href="arvore.php">Sua Arvore </a></li>
+                                    
                                     
                                     <li><a href="contato2.php">Contato</a></li>
                                 </ul>
@@ -62,7 +72,7 @@
                 </div>
             </div>
         </div>
-		<!-- FIM MENU DE PAGINAS --> 
+		<!-- FIM MENU DE PAGINAS -->
 		
     <!-- Contact Section Begin -->
     <section class="contact-section spad">
