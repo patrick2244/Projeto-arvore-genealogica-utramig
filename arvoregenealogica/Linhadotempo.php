@@ -97,42 +97,29 @@ $exibe = mysqli_fetch_assoc($sql);
     
 <?php
 if (isset($_SESSION['id_user']))?>
-                <form method="post" action="linhadotempo.php"  >
+                <form method="post" action="conteudo.php"  >
                     <center>
             
-                     <textarea placeholder="oq vc esta pensando??"name="postagem" rows="10" cols="70"></textarea>
+                        <textarea placeholder="oq vc esta pensando??"name="postagem"  required="" rows="10" cols="70"></textarea>
                  <br>
                         <input type="submit"class="btn btn-success pull-center"method="POST" value="postar"  >
                    
                     
                 </form>                 
                     
-<?php
-$post=filter_input(INPUT_POST,'postagem', FILTER_SANITIZE_EMAIL);
-$sql = "INSERT INTO `post`(`postagem`) VALUES ('$post')";
-$slq = mysqli_query($conn, $sql);
-?>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <?php
 
-$sql="select*from post";
+ <?php
+
+$sql= " select * from post order by id_postagem  ";
  $resultados = mysqli_query($conn, $sql);
  
  
  if(mysqli_num_rows($resultados)){
      while ($linha= mysqli_fetch_assoc($resultados)){
-         
+         echo ' <div class="co-text"> ';
          echo '<br><br>';
-         echo $exibe["nome"].' : '. $linha["postagem"]. '  ';
-           echo '<br><br>';
+         echo $exibe["nome"].' : '.$linha["postagem"]. '  ';
+           echo '<br><br>';echo '</div >';
   }
      
      
@@ -142,8 +129,7 @@ $sql="select*from post";
      
 }
 ?>
-  </center>
-                    <!-- RODAPE -->
+ <!-- RODAPE -->
     <footer class="footer-section">
         <div class="container">
             <div class="footer-text">
@@ -185,14 +171,7 @@ $sql="select*from post";
         <div class="copyright-option">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-7">
-                        <ul>
-                            <li><a href="#">Página Inicial</a></li>
-                            <li><a href="#">Cadastre-se</a></li>
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
-                        </ul>
-                    </div>
+                    
                     <div class="col-lg-5">
                         <div class="co-text"><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
   Copyright &copy;<script>document.write(new Date().getFullYear());</script> <i class="" aria-hidden="true"></i> by TCC</a>
@@ -209,3 +188,4 @@ $sql="select*from post";
 		
 		
 </html>
+

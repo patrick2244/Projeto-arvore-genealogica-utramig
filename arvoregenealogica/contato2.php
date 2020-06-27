@@ -42,7 +42,7 @@
                                 <ul>
                                     <li class="active"><a href="linhadotempo.php">Linha do Tempo</a></li>
                                     <li><a href="formulario2.php">Cadastre seus parentes</a></li>
-                                    <li><a href="#">sua arvore </a></li>
+                                    <li><a href="arvore.php">sua arvore </a></li>
                                     <li><a href="perfil.php">perfil</a>
                                         <ul class="dropdown">
                                             <li><a href="#">configuraçao</a></li>
@@ -62,7 +62,7 @@
                 </div>
             </div>
         </div>
-		<!-- FIM MENU DE PAGINAS -->
+		<!-- FIM MENU DE PAGINAS --> 
 		
     <!-- Contact Section Begin -->
     <section class="contact-section spad">

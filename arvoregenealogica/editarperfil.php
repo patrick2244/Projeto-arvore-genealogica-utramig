@@ -130,7 +130,7 @@
 <body>
     <header class="header-section">
     <!-- BARRA DE USUARIO LOGADO -->
-    <!-- MENU DE PAGINAS -->
+    <<!-- MENU DE PAGINAS -->
         <div class="menu-item">
             <div class="container">
                 <div class="row">
@@ -147,7 +147,7 @@
                                 <ul>
                                     <li class="active"><a href="linhadotempo.php">Linha do Tempo</a></li>
                                     <li><a href="formulario2.php">Cadastre seus parentes</a></li>
-                                    <li><a href="#">sua arvore </a></li>
+                                    <li><a href="arvore.php">sua arvore </a></li>
                                     <li><a href="perfil.php">perfil</a>
                                         <ul class="dropdown">
                                             <li><a href="#">configuraçao</a></li>
@@ -167,7 +167,7 @@
                 </div>
             </div>
         </div>
-		<!-- FIM MENU DE PAGINAS -->
+		<!-- FIM MENU DE PAGINAS --> 
     
 <!-- Formulario 2 -->
 
@@ -254,12 +254,62 @@ $("#imgInp").change(function() {
   readURL(this);
 });
 </script>
-        
-        
-       
+<!-- RODAPE -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-text">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="ft-about">
+                            <div class="logo">
+                                <a href="#">
+                                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <img src="img/logo.png" alt="">
+                                </a>
+                            </div>
+                            <p>Sua Árvore Genealógica totalmente virtual</p>
+							
+                        </div>
+                    </div>
+                    <div class="col-lg-3 offset-lg-1">
+                        <div class="ft-contact">
+                            <h6>Contate-nos</h6>
+                            <ul>
+                                <li>(31) 3263-7500</li>
+                                <li>faleconosco@utramig.mg.gov.br</li>
+                                <li>Av. Afonso Pena, 3400 - Cruzeiro, Belo Horizonte - MG</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 offset-lg-1">
+                        <div class="ft-newslatter">
+                            <h6>Fique por dentro</h6>
+                            <p>Receba informacões sobre sua Árvore</p>
+                            <form action="#" class="fn-form">
+                                <input type="text" placeholder="Email">
+                                <button type="submit"><i class="fa fa-send"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-option">
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="col-lg-5">
+                        <div class="co-text"><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> <i class="" aria-hidden="true"></i> by TCC</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- RODAPE -->
+  </body>
 
 
-    
-    
-      </body>  
+		
+		
 </html>
